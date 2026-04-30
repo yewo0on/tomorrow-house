@@ -1,5 +1,9 @@
+* {
+  font-family: "Noto Sans Korea", sans-serif;
+}
+
 p {
-  color: red;
+  color: #f00;
 }
 
 /*# sourceMappingURL=style.css.map */
