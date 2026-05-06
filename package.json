@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "node-sass": "node-sass",
-    "sass": "sass --watch styles/main.scss:style.css",
-    "sass:build": "sass styles/main.scss:style.css",
+    "sass": "sass --watch styles/main.scss:style.css --source-map",
+    "sass:build": "sass styles/main.scss:style.css --source-map",
     "lint:css": "stylelint \"**/*.{css,scss}\"",
     "lint:css:fix": "stylelint \"**/*.{css,scss}\" --fix",
     "format": "prettier . --write",

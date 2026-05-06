@@ -40,3 +40,6 @@ coverage
 
 # sass cache
 .sass-cache
+
+# sass output
+*.map
