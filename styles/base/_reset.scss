@@ -1,15 +1,22 @@
+@use '../constants/colors';
+@use '../constants/typography';
+
 * {
-  margin: 0;
-  font-family: 'Noto sans Korea', sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  font-family: typography.$font-main;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
-  font-family: 'Noto sans Korea', sans-serif;
+  font-family: typography.$font-main;
+  font-size: typography.$font-size-16;
 }
 
 body {
-  font-family: 'Noto sans Korea', sans-serif;
+  font-family: typography.$font-main;
+  color: colors.$primary;
 }
 
 h1 {
