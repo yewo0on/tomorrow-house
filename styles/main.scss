@@ -5,4 +5,6 @@
 @use './base/normalize';
 @use './base/reset';
 
+@use './mixins/text-style';
+
 @use './layouts/grids';
