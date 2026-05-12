@@ -1,14 +1,12 @@
 @use './constants/colors';
 @use './constants/typography';
 @use './constants/breakpoints';
-
 @use './base/fonts';
 @use './base/normalize';
 @use './base/reset';
-
 @use './mixins/text-style';
 @use './mixins/responsive';
 @use './mixins/positions';
 @use './mixins/flexbox';
-
+@use './modules/tags';
 @use './layouts/grids';
