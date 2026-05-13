@@ -1,0 +1,75 @@
+@use '../constants/colors';
+@use '../mixins/positions';
+
+%form-base {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  background-color: colors.$white;
+  border: 1px solid colors.$border;
+  border-radius: 4px;
+  transition: background-color 200ms ease-in-out;
+  appearance: none;
+
+  &::placeholder {
+    color: colors.$tertiary;
+  }
+
+  &:not(:disabled):hover {
+    background-color: colors.$background;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+.form-select,
+.form-input {
+  @extend %form-base;
+}
+
+// NOTE: Select
+.select-group {
+  position: relative;
+
+  &.is-active {
+    .form-select {
+      border-color: colors.$blue;
+    }
+    .ic-caret {
+      color: colors.$blue;
+    }
+  }
+
+  .form-select {
+    padding-right: 40px;
+    text-overflow: ellipsis;
+  }
+
+  .ic-caret {
+    @include positions.pos-center-y;
+    right: 8px;
+    font-size: 24px;
+    color: colors.$tertiary;
+    pointer-events: none;
+  }
+}
+
+// NOTE: Input
+.input-group {
+  position: relative;
+
+  .form-input {
+    padding-left: 40px;
+  }
+
+  .ic-search {
+    @include positions.pos-center-y;
+    left: 10px;
+    font-size: 20px;
+    color: colors.$secondary;
+  }
+}
