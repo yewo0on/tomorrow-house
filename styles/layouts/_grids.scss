@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '../mixins/responsive';
+@use '../mixins/responsive' as res;
 
 /* 
  * MOBILE (<768px) --------------------------
@@ -63,7 +63,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
     }
   }
 
-  @include responsive.responsive('T') {
+  @include res.responsive('T') {
     max-width: $md-max-container;
     padding: 0 $md-margin;
 
@@ -74,7 +74,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
     }
   }
 
-  @include responsive.responsive('D') {
+  @include res.responsive('D') {
     max-width: $lg-max-container;
     padding: 0;
 

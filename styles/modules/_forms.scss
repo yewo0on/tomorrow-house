@@ -1,5 +1,5 @@
 @use '../constants/colors';
-@use '../mixins/positions';
+@use '../mixins/positions' as pos;
 
 %form-base {
   display: block;
@@ -50,7 +50,7 @@
   }
 
   .ic-caret {
-    @include positions.pos-center-y;
+    @include pos.pos-center-y;
     right: 8px;
     font-size: 24px;
     color: colors.$tertiary;
@@ -67,7 +67,7 @@
   }
 
   .ic-search {
-    @include positions.pos-center-y;
+    @include pos.pos-center-y;
     left: 10px;
     font-size: 20px;
     color: colors.$secondary;

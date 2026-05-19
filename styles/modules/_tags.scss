@@ -1,11 +1,11 @@
-@use '../mixins/flexbox';
-@use '../mixins/text-style';
 @use '../constants/colors';
+@use '../mixins/flexbox' as flex;
+@use '../mixins/text-style' as text;
 
 %tag-base {
   // 공통 스타일
-  @include flexbox.inline-flexbox;
-  @include text-style.text-style(12);
+  @include flex.inline-flexbox;
+  @include text.text-style(12);
 
   height: 20px;
   padding: 0 6px;

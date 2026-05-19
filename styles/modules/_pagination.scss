@@ -1,10 +1,10 @@
 @use '../constants/colors';
-@use '../mixins/flexbox';
-@use '../mixins/text-style';
+@use '../mixins/flexbox' as flex;
+@use '../mixins/text-style' as text;
 
 %page-item-base {
-  @include flexbox.inline-flexbox;
-  @include text-style.text-style(16, colors.$primary);
+  @include flex.inline-flexbox;
+  @include text.text-style(16, colors.$primary);
 
   height: 26px;
   font-weight: 700;
@@ -13,7 +13,7 @@
 }
 
 .pagination {
-  @include flexbox.flexbox;
+  @include flex.flexbox;
 
   .page-control {
     @extend %page-item-base;
@@ -44,7 +44,7 @@
   }
 
   .page-list {
-    @include flexbox.flexbox;
+    @include flex.flexbox;
 
     .page-item {
       margin-right: 4px;

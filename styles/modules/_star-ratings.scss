@@ -1,8 +1,8 @@
-@use '../mixins/flexbox';
 @use '../constants/colors';
+@use '../mixins/flexbox' as flex;
 
 %star-rating-base {
-  @include flexbox.flexbox(star);
+  @include flex.flexbox(star);
 
   .ic-star {
     color: colors.$border;

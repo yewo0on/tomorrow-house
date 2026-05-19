@@ -1,17 +1,17 @@
-@use '../constants/typography';
 @use '../constants/colors';
-@use '../mixins/flexbox';
-@use '../mixins/text-style';
+@use '../constants/typography' as typo;
+@use '../mixins/flexbox' as flex;
+@use '../mixins/text-style' as text;
 
 %price-base {
-  @include flexbox.inline-flexbox(start);
+  @include flex.inline-flexbox(start);
 
   .amount {
-    font-family: typography.$font-price;
+    font-family: typo.$font-price;
   }
 
   .currency {
-    font-family: typography.$font-main;
+    font-family: typo.$font-main;
   }
 }
 
@@ -37,7 +37,7 @@
   }
 
   .currency {
-    @include text-style.text-style(14);
+    @include text.text-style(14);
   }
 }
 
@@ -47,7 +47,7 @@
   }
 
   .currency {
-    @include text-style.text-style(14);
+    @include text.text-style(14);
   }
 }
 
@@ -76,7 +76,7 @@
   }
 
   .currency {
-    @include text-style.text-style(14);
+    @include text.text-style(14);
     font-weight: 400;
   }
 }

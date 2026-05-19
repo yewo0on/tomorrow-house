@@ -1,21 +1,21 @@
 @use '../constants/colors';
-@use '../constants/typography';
+@use '../constants/typography' as typo;
 
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: typography.$font-main;
+  font-family: typo.$font-main;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
 html {
-  font-family: typography.$font-main;
-  font-size: typography.$font-size-16;
+  font-family: typo.$font-main;
+  font-size: typo.$font-size-16;
 }
 
 body {
-  font-family: typography.$font-main;
+  font-family: typo.$font-main;
   color: colors.$primary;
 }
 

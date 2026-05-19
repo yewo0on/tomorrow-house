@@ -1,14 +1,14 @@
-@use '../constants/breakpoints';
+@use '../constants/breakpoints' as bp;
 
 @mixin responsive($screen) {
   @if $screen == 'T' {
-    @media screen and (min-width: breakpoints.$md-breakpoint) {
+    @media screen and (min-width: bp.$md-breakpoint) {
       @content;
     }
   }
 
   @if $screen == 'D' {
-    @media screen and (min-width: breakpoints.$lg-breakpoint) {
+    @media screen and (min-width: bp.$lg-breakpoint) {
       @content;
     }
   }
