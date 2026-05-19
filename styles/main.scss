@@ -5,6 +5,7 @@
 @use './base/fonts';
 @use './base/normalize';
 @use './base/reset';
+@use './base/globals';
 
 @use './mixins/text-style';
 @use './mixins/responsive';
@@ -18,5 +19,6 @@
 @use './modules/buttons';
 @use './modules/forms';
 @use './modules/pagination';
+@use './modules/icons';
 
 @use './layouts/grids';
