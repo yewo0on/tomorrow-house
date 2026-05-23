@@ -1,7 +1,40 @@
+@use '../constants/colors' as color;
 @use '../mixins/positions' as pos;
+@use '../mixins/flexbox' as flex;
 
 .gnb {
+  position: relative;
+  border-bottom: 1px solid color.$border;
+
+  &-wrapper {
+    @include flex.flexbox(between);
+    height: 50px;
+  }
+
+  &-right {
+    .button-group {
+      @include flex.flexbox(end);
+    }
+
+    .gnb-search-button {
+      margin-right: 4px;
+    }
+  }
+
+  &-icon-button {
+    @include flex.flexbox;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    color: color.$secondary;
+  }
+  &-menu-button {
+    color: color.$blue;
+  }
+
   .logo {
+    @include pos.pos-center;
+
     a {
       display: block;
     }
