@@ -1,14 +1,14 @@
-@use '../constants/colors';
+@use '../constants/colors' as color;
 @use '../mixins/flexbox' as flex;
 @use '../mixins/text-style' as text;
 
 %page-item-base {
   @include flex.inline-flexbox;
-  @include text.text-style(16, colors.$primary);
+  @include text.text-style(16, color.$primary);
 
   height: 26px;
   font-weight: 700;
-  background-color: colors.$white;
+  background-color: color.$white;
   border-radius: 4px;
 }
 
@@ -18,7 +18,7 @@
   .page-control {
     @extend %page-item-base;
     width: 26px;
-    border: 1px solid colors.$border;
+    border: 1px solid color.$border;
 
     &.page-prev {
       margin-right: 24px;
@@ -53,8 +53,8 @@
     .page-item.is-active {
       a,
       button {
-        color: colors.$white;
-        background-color: colors.$blue;
+        color: color.$white;
+        background-color: color.$blue;
       }
     }
 
@@ -68,7 +68,7 @@
       min-width: 26px;
       padding: 1px 4px;
       &:hover {
-        color: colors.$blue;
+        color: color.$blue;
       }
     }
   }

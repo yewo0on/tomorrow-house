@@ -1,0 +1,20 @@
+// styles/_aliases.scss
+/* aliases reference */
+// 참고용 파일 (직접 @use 하지 않음)
+
+/* =========================
+ * CONSTANTS
+ * ========================= */
+
+@use './constants/colors' as color;
+@use './constants/typography' as typo;
+@use './constants/breakpoints' as bp;
+
+/* =========================
+ * MIXINS
+ * ========================= */
+
+@use './mixins/responsive' as res;
+@use './mixins/flexbox' as flex;
+@use './mixins/positions' as pos;
+@use './mixins/text-style' as text;

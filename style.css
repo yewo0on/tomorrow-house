@@ -1006,4 +1006,13 @@ i {
   }
 }
 
+.gnb .logo a {
+  display: block;
+}
+.gnb .logo img {
+  display: block;
+  width: auto;
+  height: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

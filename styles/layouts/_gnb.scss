@@ -1,0 +1,15 @@
+@use '../mixins/positions' as pos;
+
+.gnb {
+  .logo {
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 20px;
+    }
+  }
+}

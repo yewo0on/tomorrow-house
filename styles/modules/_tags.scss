@@ -1,4 +1,4 @@
-@use '../constants/colors';
+@use '../constants/colors' as color;
 @use '../mixins/flexbox' as flex;
 @use '../mixins/text-style' as text;
 
@@ -16,20 +16,20 @@
 .tag-red {
   @extend %tag-base;
 
-  color: colors.$white;
-  background-color: colors.$red;
+  color: color.$white;
+  background-color: color.$red;
 }
 
 .tag-green {
   @extend %tag-base;
 
-  color: colors.$white;
-  background-color: colors.$green;
+  color: color.$white;
+  background-color: color.$green;
 }
 
 .tag-gray {
   @extend %tag-base;
 
-  color: colors.$secondary;
-  background-color: colors.$border;
+  color: color.$secondary;
+  background-color: color.$border;
 }

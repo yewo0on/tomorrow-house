@@ -1,4 +1,4 @@
-@use '../constants/colors';
+@use '../constants/colors' as color;
 @use '../constants/typography' as typo;
 
 * {
@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: typo.$font-main;
-  color: colors.$primary;
+  color: color.$primary;
 }
 
 h1 {

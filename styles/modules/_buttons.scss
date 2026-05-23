@@ -1,4 +1,4 @@
-@use '../constants/colors';
+@use '../constants/colors' as color;
 @use '../mixins/flexbox' as flex;
 @use '../mixins/text-style' as text;
 
@@ -17,46 +17,46 @@
 // NOTE: Button Styles
 .btn-primary {
   @extend %btn-base;
-  color: colors.$white;
-  background-color: colors.$blue;
+  color: color.$white;
+  background-color: color.$blue;
   transition: background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
-    background-color: colors.$blue-dark;
+    background-color: color.$blue-dark;
   }
 }
 
 .btn-secondary {
   @extend %btn-base;
-  color: colors.$primary;
-  background-color: colors.$border;
+  color: color.$primary;
+  background-color: color.$border;
   transition: background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
-    background-color: colors.$tertiary;
+    background-color: color.$tertiary;
   }
 }
 
 .btn-outlined {
   @extend %btn-base;
-  color: colors.$blue;
-  background-color: colors.$white;
-  border: 1px solid colors.$blue;
+  color: color.$blue;
+  background-color: color.$white;
+  border: 1px solid color.$blue;
   transition: background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
-    background-color: colors.$blue-light;
+    background-color: color.$blue-light;
   }
 }
 
 .btn-ghost {
   @extend %btn-base;
-  color: colors.$primary;
+  color: color.$primary;
   background-color: transparent;
   transition: color 200ms ease-in-out;
 
   &:not(:disabled):hover {
-    color: colors.$secondary;
+    color: color.$secondary;
   }
 }
 
