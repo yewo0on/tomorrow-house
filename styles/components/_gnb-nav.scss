@@ -1,0 +1,17 @@
+@use '../constants/colors' as color;
+@use '../mixins/text-style' as text;
+@use '../mixins/flexbox' as flex;
+
+.gnb-nav {
+  &-list {
+    @include flex.flexbox(start);
+    gap: 24px;
+  }
+
+  &-item {
+    a {
+      @include text.text-style(18, color.$primary);
+      font-weight: 700;
+    }
+  }
+}

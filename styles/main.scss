@@ -2,13 +2,10 @@
 @use './base/normalize';
 @use './base/reset';
 @use './base/globals';
-@use './modules/tags';
 @use './modules/avatars';
-@use './modules/star-ratings';
-@use './modules/prices';
 @use './modules/buttons';
 @use './modules/forms';
-@use './modules/pagination';
 @use './modules/icons';
+@use './components/gnb-nav';
 @use './layouts/grids';
 @use './layouts/gnb';

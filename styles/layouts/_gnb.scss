@@ -1,6 +1,7 @@
 @use '../constants/colors' as color;
 @use '../mixins/positions' as pos;
 @use '../mixins/flexbox' as flex;
+@use '../mixins/responsive' as res;
 
 .gnb {
   position: relative;
@@ -28,6 +29,7 @@
     font-size: 24px;
     color: color.$secondary;
   }
+
   &-menu-button {
     color: color.$blue;
   }
@@ -43,6 +45,58 @@
       display: block;
       width: auto;
       height: 20px;
+    }
+  }
+
+  @include res.responsive(T) {
+    // 768px
+
+    &-wrapper {
+      height: 80px;
+    }
+
+    &-left {
+      @include flex.flexbox(start);
+    }
+    &-right {
+      @include flex.flexbox(end);
+
+      .button-group {
+        margin-right: 24px;
+
+        .gnb-icon-button {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .logo {
+      position: static;
+      transform: none;
+      margin-right: 32px;
+
+      img {
+        height: 24px;
+      }
+    }
+
+    .btn-primary {
+      width: 88px;
+
+      i {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  @include res.responsive(D) {
+    // 1200px
+
+    &-right {
+      .input-group {
+        width: 264px;
+        margin-right: 24px;
+      }
     }
   }
 }
