@@ -1,0 +1,23 @@
+@use '../constants/colors' as color;
+@use '../mixins/flexbox' as flex;
+
+.gnb-icon-button {
+  @include flex.flexbox;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  color: color.$secondary;
+  transition: color 200ms ease-in-out;
+
+  &.is-menu {
+    color: color.$blue;
+
+    &:active {
+      color: color.$blue-dark;
+    }
+  }
+
+  &:active {
+    color: color.$primary;
+  }
+}
