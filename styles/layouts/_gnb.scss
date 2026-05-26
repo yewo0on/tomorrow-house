@@ -1,4 +1,5 @@
 @use '../constants/colors' as color;
+@use '../mixins/text-style' as text;
 @use '../mixins/positions' as pos;
 @use '../mixins/flexbox' as flex;
 @use '../mixins/responsive' as res;
@@ -54,6 +55,23 @@
 
         .gnb-icon-button {
           margin-right: 8px;
+        }
+
+        .gnb-auth {
+          margin-left: 8px;
+
+          a {
+            @include text.text-style(14, color.$secondary);
+            font-weight: 700;
+
+            &:first-child {
+              margin-right: 12px;
+            }
+
+            &:hover {
+              color: color.$blue;
+            }
+          }
         }
       }
     }
