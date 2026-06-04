@@ -62,7 +62,7 @@
 </div>
 ```
 
-- 로그인을 했을 경우
+- 로그인을 한 경우
 
 ```html
 <div class="button-group">
@@ -108,5 +108,33 @@
       <img src="./assets/images/img-user-01.jpg" alt="프로필 사진" />
     </div>
   </button>
+</div>
+```
+
+---
+
+### 3. Sidebar
+
+- 로그인을 하지 않은 경우
+
+```html
+<div class="sidebar-auth">
+  <a class="btn-outlined btn-40" href="/">로그인</a>
+  <a class="btn-primary btn-40" href="/">회원가입</a>
+</div>
+```
+
+- 로그인을 한 경우
+
+```html
+<div class="sidebar-user">
+  <a href="/">
+    <div class="avatar-24">
+      <!-- <img src="./assets/images/img-user-01.jpg" alt="유저 이미지" /> -->
+    </div>
+    <strong class="username"
+      >사달라사달라사달라사달라사달라사달라사달라사달라사달라</strong
+    >
+  </a>
 </div>
 ```
