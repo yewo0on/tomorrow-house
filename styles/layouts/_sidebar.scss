@@ -1,0 +1,60 @@
+@use '../constants/colors' as color;
+@use '../mixins/flexbox' as flex;
+@use '../mixins/text-style' as text;
+
+.sidebar {
+  width: 240px;
+  padding: 32px 20px;
+  background-color: color.$white;
+
+  &-header {
+    padding: 0 12px;
+
+    .logo {
+      @include flex.flexbox(start);
+      a {
+        display: block;
+      }
+      img {
+        display: block;
+        width: auto;
+        height: 20px;
+      }
+    }
+  }
+
+  &-user,
+  &-auth {
+    @include flex.flexbox(start);
+    height: 88px;
+  }
+
+  &-user {
+    a {
+      @include flex.flexbox(start);
+      @include text.text-style(14, color.$primary);
+      font-weight: 700;
+      width: 100%;
+    }
+    .avatar-24 {
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+
+    .username {
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &-auth {
+    @include flex.flexbox(between);
+
+    a {
+      width: 84px;
+    }
+  }
+}
