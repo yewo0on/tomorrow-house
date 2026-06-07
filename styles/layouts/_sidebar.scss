@@ -1,11 +1,23 @@
 @use '../constants/colors' as color;
+@use '../constants/z-indexes' as z;
 @use '../mixins/flexbox' as flex;
 @use '../mixins/text-style' as text;
 
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: z.$sidebar-level;
   width: 240px;
+  height: 100vh;
   padding: 32px 20px;
+  overflow-y: auto;
   background-color: color.$white;
+  overscroll-behavior: contain;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &-header {
     padding: 0 12px;
