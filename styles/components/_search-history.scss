@@ -1,0 +1,52 @@
+@use '../constants/colors' as color;
+@use '../mixins/flexbox' as flex;
+@use '../mixins/text-style' as text;
+
+.search-history {
+  $close-button-size: 32px;
+
+  &-header {
+    @include flex.flexbox(between);
+    margin-bottom: 8px;
+
+    .title,
+    button {
+      @include text.text-style(13, color.$secondary);
+      font-weight: 400;
+    }
+  }
+
+  &-content {
+    .placeholder {
+      @include flex.flexbox(start);
+      @include text.text-style(16, color.$tertiary);
+      font-weight: 400;
+      width: 100%;
+      height: 44px;
+      padding: 0 8px;
+    }
+  }
+
+  &-item {
+    position: relative;
+
+    .word-button {
+      @include text.text-style(16, color.$primary);
+      width: 100%;
+      padding: 10px $close-button-size 10px 8px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .delete-button {
+      @include flex.flexbox;
+      position: absolute;
+      top: 6px;
+      right: 0;
+      width: $close-button-size;
+      height: $close-button-size;
+      font-size: 16px;
+      color: color.$tertiary;
+    }
+  }
+}

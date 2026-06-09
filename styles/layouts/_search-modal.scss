@@ -1,7 +1,6 @@
 @use '../constants/colors' as color;
 @use '../constants/z-indexes' as z;
 @use '../mixins/flexbox' as flex;
-@use '../mixins/text-style' as text;
 
 .search-modal {
   position: fixed;
@@ -13,7 +12,11 @@
   padding: 12px 0;
   background-color: color.$white;
 
-  &.form {
+  &-header {
+    margin-bottom: 20px;
+  }
+
+  &-form {
     @include flex.flexbox(between);
 
     .input-group {
