@@ -4,6 +4,8 @@
 @use '../mixins/text-style' as text;
 
 .sidebar {
+  $sidebar-width: 240px;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +15,13 @@
   padding: 32px 20px;
   overflow-y: auto;
   background-color: color.$white;
+  transform: translate3d(-$sidebar-width, 0, 0);
+  transition: transform 300ms ease-in-out;
   overscroll-behavior: contain;
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
 
   &::-webkit-scrollbar {
     display: none;
