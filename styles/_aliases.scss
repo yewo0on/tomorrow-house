@@ -6,15 +6,17 @@
  * CONSTANTS
  * ========================= */
 
-@use './constants/colors' as color;
-@use './constants/typography' as typo;
-@use './constants/breakpoints' as bp;
+@use '../constants/colors' as color;
+@use '../constants/typography' as typo;
+@use '../constants/breakpoints' as bp;
+@use '../constants/box-shadows' as shadow;
+@use '../constants/z-indexes' as z;
 
 /* =========================
  * MIXINS
  * ========================= */
 
-@use './mixins/responsive' as res;
-@use './mixins/flexbox' as flex;
-@use './mixins/positions' as pos;
-@use './mixins/text-style' as text;
+@use '../mixins/responsive' as res;
+@use '../mixins/flexbox' as flex;
+@use '../mixins/positions' as pos;
+@use '../mixins/text-style' as text;
