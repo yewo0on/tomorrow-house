@@ -1,0 +1,41 @@
+@use '../constants/colors' as color;
+@use '../mixins/text-style' as text;
+@use '../mixins/positions' as pos;
+@use '../mixins/flexbox' as flex;
+
+.lnb {
+  overflow-x: auto;
+  border-bottom: 1px solid color.$border;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-list {
+    @include flex.inline-flexbox(start);
+    position: relative;
+    left: -8px;
+    white-space: nowrap;
+  }
+
+  &-item {
+    a {
+      @include flex.inline-flexbox;
+      @include text.text-style(13, color.$dark);
+      height: 40px;
+      padding: 0 8px;
+      font-weight: 700;
+
+      .ic-new {
+        color: color.$red;
+      }
+    }
+
+    &.is-active {
+      a {
+        color: color.$blue;
+        border-bottom: 2px solid color.$blue;
+      }
+    }
+  }
+}
