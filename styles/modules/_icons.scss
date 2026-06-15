@@ -1,3 +1,5 @@
+@use '../constants/colors' as color;
+
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: tomorrow, sans-serif !important;
@@ -62,6 +64,7 @@ i {
 
 .ic-new::before {
   content: '\e90c';
+  color: color.$red;
 }
 
 .ic-search::before {
