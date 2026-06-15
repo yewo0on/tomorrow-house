@@ -1,11 +1,15 @@
+@use 'sass:math';
 @use '../constants/colors' as color;
 @use '../mixins/text-style' as text;
 @use '../mixins/positions' as pos;
 @use '../mixins/flexbox' as flex;
+@use '../layouts/grids' as grid;
 
 .lnb {
+  $lnb-link-padding: 8px;
+  $grid-margin: grid.$sm-margin + math.div(grid.$gutter, 2);
+
   overflow-x: auto;
-  border-bottom: 1px solid color.$border;
 
   &::-webkit-scrollbar {
     display: none;
@@ -13,9 +17,11 @@
 
   &-list {
     @include flex.inline-flexbox(start);
-    position: relative;
-    left: -8px;
+    height: 40px;
+    padding: 0 #{$grid-margin - $lnb-link-padding};
+    margin-left: -$grid-margin;
     white-space: nowrap;
+    border-bottom: 1px solid color.$border;
   }
 
   &-item {
@@ -23,18 +29,15 @@
       @include flex.inline-flexbox;
       @include text.text-style(13, color.$dark);
       height: 40px;
-      padding: 0 8px;
+      padding: 0 $lnb-link-padding;
       font-weight: 700;
-
-      .ic-new {
-        color: color.$red;
-      }
+      border-bottom: 2px solid transparent;
     }
 
     &.is-active {
       a {
         color: color.$blue;
-        border-bottom: 2px solid color.$blue;
+        border-bottom-color: color.$blue;
       }
     }
   }
