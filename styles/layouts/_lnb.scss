@@ -9,11 +9,14 @@
 @use '../mixins/positions' as pos;
 @use '../mixins/flexbox' as flex;
 @use '../mixins/scrollbar' as scroll;
+@use '../mixins/responsive' as res;
 
 // Layouts
 @use '../layouts/grids' as grid;
 
 .lnb {
+  $lnb-height-sm: 40px; // 모바일
+  $lnb-height-md: 50px; // 태블릿
   $lnb-link-padding: 8px;
   $grid-margin: grid.$sm-margin + math.div(grid.$gutter, 2);
 
@@ -22,7 +25,7 @@
 
   &-list {
     @include flex.inline-flexbox(start);
-    height: 40px;
+    height: $lnb-height-sm;
     padding: 0 #{$grid-margin - $lnb-link-padding};
     margin-left: -$grid-margin;
     white-space: nowrap;
@@ -33,16 +36,40 @@
     a {
       @include flex.inline-flexbox;
       @include text.text-style(13, color.$dark);
-      height: 40px;
+      height: $lnb-height-sm;
       padding: 0 $lnb-link-padding;
       font-weight: 700;
       border-bottom: 2px solid transparent;
+
+      &:hover {
+        color: color.$blue;
+      }
     }
 
     &.is-active {
       a {
         color: color.$blue;
         border-bottom-color: color.$blue;
+      }
+    }
+  }
+
+  @include res.responsive(T) {
+    height: $lnb-height-md;
+    overflow-x: visible;
+    border-bottom: 1px solid color.$border;
+
+    &-list {
+      height: auto;
+      padding: 0;
+      margin-left: 0;
+      border-bottom: 0;
+    }
+
+    &-item {
+      a {
+        @include text.text-style(14);
+        height: $lnb-height-md;
       }
     }
   }
