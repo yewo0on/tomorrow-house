@@ -1,11 +1,16 @@
+// Constants
 @use '../constants/colors' as color;
 @use '../constants/z-indexes' as z;
+
+// Mixins
 @use '../mixins/flexbox' as flex;
 @use '../mixins/text-style' as text;
+@use '../mixins/scrollbar' as scroll;
 
 .sidebar {
   $sidebar-width: 240px;
 
+  @include scroll.no-scrollbar;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,10 +26,6 @@
 
   &.is-active {
     transform: translate3d(0, 0, 0);
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 
   &-header {

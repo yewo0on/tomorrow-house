@@ -1,19 +1,24 @@
+// Sass Built-in
 @use 'sass:math';
+
+// Constants
 @use '../constants/colors' as color;
+
+// Mixins
 @use '../mixins/text-style' as text;
 @use '../mixins/positions' as pos;
 @use '../mixins/flexbox' as flex;
+@use '../mixins/scrollbar' as scroll;
+
+// Layouts
 @use '../layouts/grids' as grid;
 
 .lnb {
   $lnb-link-padding: 8px;
   $grid-margin: grid.$sm-margin + math.div(grid.$gutter, 2);
 
+  @include scroll.no-scrollbar;
   overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   &-list {
     @include flex.inline-flexbox(start);
