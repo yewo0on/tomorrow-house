@@ -11,15 +11,16 @@
 @use '../constants/breakpoints' as bp;
 @use '../constants/box-shadows' as shadow;
 @use '../constants/z-indexes' as z;
+@use '../constants/dimensions' as dim;
 
 /* =========================
  * MIXINS
  * ========================= */
 
 @use '../mixins/responsive' as res;
-@use '../mixins/flexbox' as flex;
 @use '../mixins/positions' as pos;
 @use '../mixins/text-style' as text;
+@use '../mixins/flexbox' as flex;
 @use '../mixins/scrollbar' as scroll;
 
 /* =========================

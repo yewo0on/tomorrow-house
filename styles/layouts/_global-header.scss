@@ -1,0 +1,28 @@
+@use '../constants/dimensions' as dim;
+@use '../mixins/responsive' as res;
+
+.global-header {
+  width: 100%;
+  height: dim.$gnb-height-sm + dim.$lnb-height-sm;
+
+  .gnb,
+  .lnb {
+    position: fixed;
+    left: 0;
+    width: 100%;
+  }
+  .gnb {
+    top: 0;
+  }
+  .lnb {
+    top: dim.$gnb-height-sm;
+  }
+
+  @include res.responsive(T) {
+    height: dim.$gnb-height-md + dim.$lnb-height-md;
+
+    .lnb {
+      top: dim.$gnb-height-md;
+    }
+  }
+}
