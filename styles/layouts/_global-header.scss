@@ -1,4 +1,5 @@
 @use '../constants/dimensions' as dim;
+@use '../constants/z-indexes' as z;
 @use '../mixins/responsive' as res;
 
 .global-header {
@@ -13,9 +14,11 @@
   }
   .gnb {
     top: 0;
+    z-index: z.$gnb-level;
   }
   .lnb {
     top: dim.$gnb-height-sm;
+    z-index: z.$lnb-level;
   }
 
   @include res.responsive(T) {
