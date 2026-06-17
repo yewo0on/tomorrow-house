@@ -1,0 +1,76 @@
+@use '../constants/colors' as color;
+@use '../mixins/text-style' as text;
+@use '../mixins/flexbox' as flex;
+@use '../mixins/responsive' as res;
+
+.global-footer {
+  padding-top: 32px;
+  padding-bottom: 40px;
+  background-color: color.$background;
+
+  &-title {
+    @include text.text-style(13, color.$dark);
+    font-weight: 700px;
+
+    .ic-chevron {
+      display: inline-block;
+      font-size: 12px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &-contact {
+    @include text.text-style(24, color.$dark);
+    font-weight: 700;
+  }
+
+  &-time {
+    @include text.text-style(12, color.$primary);
+    margin-bottom: 24px;
+  }
+
+  &-detail-list {
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: color.$secondary;
+  }
+
+  &-detail-item {
+    @include flex.flexbox(start);
+
+    address {
+      display: inline;
+    }
+
+    dt::after {
+      content: ':';
+      margin: 0 2px;
+    }
+  }
+
+  @include res.responsive(D) {
+    &-title {
+      @include text.text-style(14);
+    }
+
+    &-contact:hover {
+      opacity: 0.5;
+    }
+
+    &-detail-list {
+      @include flex.flexbox(start);
+    }
+
+    &-detail-item {
+      a:hover {
+        text-decoration: underline;
+      }
+
+      &:not(:last-child)::after {
+        content: '|';
+        margin: 0 8px;
+      }
+    }
+  }
+}
