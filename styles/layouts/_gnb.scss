@@ -1,4 +1,5 @@
 @use '../constants/colors' as color;
+@use '../constants/dimensions' as dim;
 @use '../mixins/text-style' as text;
 @use '../mixins/positions' as pos;
 @use '../mixins/flexbox' as flex;
@@ -7,11 +8,12 @@
 
 .gnb {
   position: relative;
+  background-color: color.$white;
   border-bottom: 1px solid color.$border;
 
   &-wrapper {
     @include flex.flexbox(between);
-    height: 50px;
+    height: dim.$gnb-height-sm - 1px;
   }
 
   &-right {
@@ -42,7 +44,7 @@
     // 768px
 
     &-wrapper {
-      height: 80px;
+      height: dim.$gnb-height-md - 1px;
     }
 
     &-left {
