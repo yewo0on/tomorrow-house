@@ -1,0 +1,47 @@
+@use '../constants/colors' as color;
+@use '../mixins/text-style' as text;
+@use '../mixins/flexbox' as flex;
+@use '../mixins/responsive' as res;
+
+.breadcrumb {
+  @include flex.flexbox(start);
+  flex-wrap: wrap;
+  padding: 10px 0;
+
+  a {
+    @include text.text-style(13, color.$secondary);
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  .ic-chevron {
+    display: inline-block;
+    margin: 0 2px;
+    font-size: 12px;
+    color: color.$tertiary;
+    transform: rotate(-90deg);
+  }
+
+  @include res.responsive(T) {
+    padding: 16px 0;
+
+    a {
+      @include text.text-style(14);
+    }
+
+    .ic-chevron {
+      margin: 0 4px;
+    }
+  }
+
+  @include res.responsive(D) {
+    padding-top: 24px;
+    padding-bottom: 40px;
+
+    a:hover {
+      opacity: 0.4;
+    }
+  }
+}
