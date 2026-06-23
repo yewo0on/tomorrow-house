@@ -18,6 +18,9 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
       rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -258,53 +261,8 @@
                 <ol class="slider-list">
                   <li
                     class="slider-item"
-                    role="tabpanel"
+                    role="tabpanel "
                     aria-labelledby="product-carousel-tab-1">
-                    <button type="button">
-                      <img
-                        src="./assets/images/img-product-01.jpg"
-                        alt="1번 이미지" />
-                    </button>
-                  </li>
-                  <li
-                    class="slider-item"
-                    role="tabpanel"
-                    aria-labelledby="product-carousel-tab-2">
-                    <button type="button">
-                      <img
-                        src="./assets/images/img-product-02.jpg"
-                        alt="2번 이미지" />
-                    </button>
-                  </li>
-                  <li
-                    class="slider-item"
-                    role="tabpanel"
-                    aria-labelledby="product-carousel-tab-3">
-                    <button type="button">
-                      <img
-                        src="./assets/images/img-product-03.jpg"
-                        alt="3번 이미지" />
-                    </button>
-                  </li>
-                  <li
-                    class="slider-item"
-                    role="tabpanel"
-                    aria-labelledby="product-carousel-tab-4">
-                    <button type="button">
-                      <img
-                        src="./assets/images/img-product-04.jpg"
-                        alt="4번 이미지" />
-                    </button>
-                  </li>
-                </ol>
-              </div>
-
-              <div class="product-carousel-thumbnail">
-                <ol class="thumbnail-list" role="tablist">
-                  <li
-                    class="thumbnail-item"
-                    role="tab"
-                    id="product-carousel-tab-1">
                     <figure>
                       <img
                         src="./assets/images/img-product-01.jpg"
@@ -315,9 +273,9 @@
                     </figcaption>
                   </li>
                   <li
-                    class="thumbnail-item"
-                    role="tab"
-                    id="product-carousel-tab-2">
+                    class="slider-item"
+                    role="tabpanel"
+                    aria-labelledby="product-carousel-tab-2">
                     <figure>
                       <img
                         src="./assets/images/img-product-02.jpg"
@@ -328,9 +286,9 @@
                     </figcaption>
                   </li>
                   <li
-                    class="thumbnail-item"
-                    role="tab"
-                    id="product-carousel-tab-3">
+                    class="slider-item"
+                    role="tabpanel"
+                    aria-labelledby="product-carousel-tab-3">
                     <figure>
                       <img
                         src="./assets/images/img-product-03.jpg"
@@ -341,9 +299,9 @@
                     </figcaption>
                   </li>
                   <li
-                    class="thumbnail-item"
-                    role="tab"
-                    id="product-carousel-tab-4">
+                    class="slider-item"
+                    role="tabpanel"
+                    aria-labelledby="product-carousel-tab-4">
                     <figure>
                       <img
                         src="./assets/images/img-product-04.jpg"
@@ -352,6 +310,51 @@
                     <figcaption class="visually-hidden">
                       보아르 전기히터 상세 이미지 4
                     </figcaption>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="product-carousel-thumbnail">
+                <ol class="thumbnail-list" role="tablist">
+                  <li
+                    class="thumbnail-item"
+                    role="tab"
+                    id="product-carousel-tab-1">
+                    <button type="button">
+                      <img
+                        src="./assets/images/img-product-01.jpg"
+                        alt="1번 이미지" />
+                    </button>
+                  </li>
+                  <li
+                    class="thumbnail-item"
+                    role="tab"
+                    id="product-carousel-tab-2">
+                    <button type="button">
+                      <img
+                        src="./assets/images/img-product-02.jpg"
+                        alt="2번 이미지" />
+                    </button>
+                  </li>
+                  <li
+                    class="thumbnail-item"
+                    role="tab"
+                    id="product-carousel-tab-3">
+                    <button type="button">
+                      <img
+                        src="./assets/images/img-product-03.jpg"
+                        alt="3번 이미지" />
+                    </button>
+                  </li>
+                  <li
+                    class="thumbnail-item"
+                    role="tab"
+                    id="product-carousel-tab-4">
+                    <button type="button">
+                      <img
+                        src="./assets/images/img-product-04.jpg"
+                        alt="4번 이미지" />
+                    </button>
                   </li>
                 </ol>
               </div>
@@ -578,5 +581,8 @@
     </aside>
 
     <div class="overlay" aria-hidden></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="./js/productCarousel.js"></script>
   </body>
 </html>
