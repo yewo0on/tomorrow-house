@@ -6,6 +6,9 @@
 @use './modules/buttons';
 @use './modules/forms';
 @use './modules/icons';
+@use './modules/prices';
+@use './modules/star-ratings';
+@use './modules/tags';
 @use './components/gnb-nav';
 @use './components/gnb-icon-buttons';
 @use './components/my-menu';
@@ -13,6 +16,7 @@
 @use './components/search-history';
 @use './components/breadcrumb';
 @use './components/product-carousel';
+@use './components/product-info';
 @use './layouts/grids';
 @use './layouts/gnb';
 @use './layouts/lnb';

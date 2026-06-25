@@ -1,0 +1,90 @@
+@use '../constants/colors' as color;
+@use '../constants/typography' as typo;
+@use '../mixins/text-style' as text;
+@use '../mixins/flexbox' as flex;
+
+.product-info {
+  padding: 20px 0;
+
+  &-header {
+    margin-bottom: 16px;
+
+    .info-brand {
+      @include text.text-style(13, color.$blue);
+      font-weight: 700;
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
+
+    .info-title {
+      @include text.text-style(18, color.$dark);
+      margin-bottom: 4px;
+      font-weight: 400;
+    }
+
+    .info-review {
+      @include flex.flexbox(start);
+
+      .star-rating-13 {
+        margin-right: 8px;
+      }
+
+      p {
+        @include text.text-style(13, color.$blue);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-price {
+    margin-bottom: 16px;
+
+    .info-original-price,
+    .info-sale-price {
+      @include flex.flexbox(start);
+    }
+
+    .discount-rate {
+      @include flex.inline-flexbox(start);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      color: color.$blue;
+
+      .rate {
+        font-family: typo.$font-price;
+      }
+      .percent {
+        font-family: typo.$font-main;
+      }
+    }
+
+    .info-sale-price {
+      margin-bottom: 12px;
+    }
+
+    .price-20 {
+      margin-right: 4px;
+    }
+
+    .info-point {
+      @include text.text-style(13, color.$secondary);
+
+      strong {
+        color: color.$blue;
+      }
+    }
+  }
+
+  &-dilivery {
+    padding-top: 12px;
+    border-top: 1px solid color.$border;
+
+    span {
+      display: block;
+      margin-bottom: 2px;
+    }
+  }
+}
