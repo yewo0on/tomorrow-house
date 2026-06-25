@@ -22,6 +22,7 @@
 @use '../mixins/text-style' as text;
 @use '../mixins/flexbox' as flex;
 @use '../mixins/scrollbar' as scroll;
+@use '../mixins/star-rating' as star;
 
 /* =========================
  * LAYOUTS
