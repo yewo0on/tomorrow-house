@@ -1,0 +1,68 @@
+@use '../constants/colors' as color;
+@use '../mixins/text-style' as text;
+@use '../mixins/flexbox' as flex;
+@use '../mixins/positions' as pos;
+@use '../mixins/responsive' as res;
+
+.checkout-card {
+  position: relative;
+  padding: 8px 10px 8px 12px;
+  background-color: color.$background;
+  border-radius: 4px;
+
+  .checkout-header {
+    margin-bottom: 8px;
+  }
+
+  .checkout-title {
+    @include text.text-style(13, color.$primary);
+    padding-right: 36px - 10px;
+    font-weight: 400;
+  }
+
+  .delete-button {
+    @include flex.inline-flexbox;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: color.$secondary;
+  }
+
+  .checkout-select {
+    position: relative;
+    display: inline-block;
+
+    select {
+      @include text.text-style(14, color.$primary);
+      width: 72px;
+      height: 24px;
+      line-height: 1;
+      padding: 0 8px;
+      background-color: color.$white;
+      border: 1px solid color.$border;
+      border-radius: 3px;
+      appearance: none;
+    }
+
+    i {
+      @include pos.pos-center-y;
+      right: 2px;
+      font-size: 20px;
+      color: color.$tertiary;
+      pointer-events: none;
+    }
+  }
+
+  .checkout-footer {
+    @include flex.flexbox(between);
+  }
+
+  @include res.resposive(D) {
+    .checkout-title {
+      @include text.text-style(16);
+    }
+  }
+}
