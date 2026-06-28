@@ -1,0 +1,42 @@
+@use '../constants/colors' as color;
+@use '../mixins/text-style' as text;
+@use '../mixins/flexbox' as flex;
+
+.order-form {
+  margin-bottom: 40px;
+
+  .order-inputs {
+    margin-bottom: 20px;
+
+    .select-group {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .order-summary {
+    @include flex.flexbox(between);
+    margin-bottom: 20px;
+
+    dt {
+      @include text.text-style(13, color.$dark);
+      font-weight: 700;
+    }
+  }
+
+  .button-group {
+    @include flex.flexbox;
+
+    button {
+      width: 50%;
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
