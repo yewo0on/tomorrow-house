@@ -53,6 +53,10 @@
     background-color: color.$background;
     border-bottom: 0;
 
+    &-list {
+      margin: 0;
+    }
+
     &-item {
       button {
         @include text.text-style(16);
