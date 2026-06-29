@@ -1,0 +1,45 @@
+@use '../constants/colors' as color;
+@use '../mixins/text-style' as text;
+@use '../mixins/responsive' as res;
+
+.product-table {
+  $table-cell-padding: 12px;
+  $table-th-width-sm: 100px;
+  $table-th-width-md: 140px;
+
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  tr {
+    @include text.text-style(12, color.$primary);
+    text-align: left;
+    border-bottom: 1px solid color.$border;
+    vertical-align: top;
+  }
+
+  th,
+  td {
+    padding: $table-cell-padding;
+  }
+
+  th {
+    width: $table-th-width-sm + $table-cell-padding;
+    font-weight: 400;
+    color: color.$secondary;
+  }
+
+  td {
+    padding-left: 0;
+  }
+
+  @include res.responsive(T) {
+    tr {
+      @include text.text-style(14);
+    }
+
+    th {
+      width: $table-th-width-md + $table-cell-padding * 2;
+    }
+  }
+}
