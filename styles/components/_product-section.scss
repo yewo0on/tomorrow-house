@@ -1,0 +1,25 @@
+@use '../constants/colors' as color;
+@use '../mixins/responsive' as res;
+
+.product-section {
+  padding-bottom: 20px;
+
+  &-divider {
+    width: 100%;
+    height: 8px;
+    margin: 0 -15px;
+    background-color: color.$border;
+  }
+
+  @include res.responsive(T) {
+    width: 100%;
+    max-width: 692px;
+    padding-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include res.responsive(D) {
+    margin-left: 0;
+  }
+}
