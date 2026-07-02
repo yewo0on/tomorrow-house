@@ -1,13 +1,14 @@
 @use '../constants/colors' as color;
 @use '../constants/dimensions' as dim;
+@use '../constants/grids' as grids;
 @use '../constants/z-indexes' as z;
+
 @use '../mixins/responsive' as res;
 @use '../mixins/text-style' as text;
 @use '../mixins/flexbox' as flex;
-@use '../layouts/grids' as grid;
 
 .product-tab {
-  $grid-margin: grid.$sm-margin + grid.$gutter / 2;
+  $grid-margin: grids.$sm-margin + grids.$gutter / 2;
 
   position: sticky;
   top: dim.$gnb-height-sm + dim.$lnb-height-sm;

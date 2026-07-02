@@ -12,6 +12,7 @@
 @use '../constants/box-shadows' as shadow;
 @use '../constants/z-indexes' as z;
 @use '../constants/dimensions' as dim;
+@use '../constants/grids' as grids;
 
 /* =========================
  * MIXINS
@@ -23,9 +24,3 @@
 @use '../mixins/flexbox' as flex;
 @use '../mixins/scrollbar' as scroll;
 @use '../mixins/star-rating' as star;
-
-/* =========================
- * LAYOUTS
- * ========================= */
-
-@use '../layouts/grids' as grid;

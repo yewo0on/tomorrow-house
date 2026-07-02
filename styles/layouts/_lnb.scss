@@ -4,6 +4,7 @@
 // Constants
 @use '../constants/colors' as color;
 @use '../constants/dimensions' as dim;
+@use '../constants/grids' as grids;
 
 // Mixins
 @use '../mixins/text-style' as text;
@@ -12,12 +13,9 @@
 @use '../mixins/scrollbar' as scroll;
 @use '../mixins/responsive' as res;
 
-// Layouts
-@use '../layouts/grids' as grid;
-
 .lnb {
   $lnb-link-padding: 8px;
-  $grid-margin: grid.$sm-margin + math.div(grid.$gutter, 2);
+  $grid-margin: grids.$sm-margin + math.div(grids.$gutter, 2);
 
   @include scroll.no-scrollbar;
   overflow-x: auto;

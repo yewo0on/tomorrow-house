@@ -1,4 +1,5 @@
 @use '../constants/colors' as color;
+@use '../constants/grids' as grids;
 @use '../mixins/responsive' as res;
 
 .product-section {
@@ -7,7 +8,7 @@
   &-divider {
     width: 100%;
     height: 8px;
-    margin: 0 -15px;
+    margin: 0 -#{grids.$grid-margin};
     background-color: color.$border;
   }
 

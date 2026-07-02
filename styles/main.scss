@@ -2,6 +2,7 @@
 @use './base/normalize';
 @use './base/reset';
 @use './base/globals';
+
 @use './modules/avatars';
 @use './modules/buttons';
 @use './modules/forms';
@@ -9,6 +10,7 @@
 @use './modules/prices';
 @use './modules/star-ratings';
 @use './modules/tags';
+
 @use './components/gnb-nav';
 @use './components/gnb-icon-buttons';
 @use './components/my-menu';
@@ -22,7 +24,8 @@
 @use './components/product-section';
 @use './components/product-section-header';
 @use './components/product-table';
-@use './layouts/grids';
+
+@use './layouts/grid';
 @use './layouts/gnb';
 @use './layouts/lnb';
 @use './layouts/sidebar';

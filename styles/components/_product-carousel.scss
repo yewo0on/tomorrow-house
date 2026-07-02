@@ -1,15 +1,15 @@
 @use '../constants/colors' as color;
+@use '../constants/grids' as grids;
+
 @use '../mixins/positions' as pos;
 @use '../mixins/flexbox' as flex;
 @use '../mixins/responsive' as res;
 
 .product-carousel {
-  $grid-margin: 15px;
-
   position: relative;
 
   &-slider {
-    margin: 0 -#{$grid-margin};
+    margin: 0 -#{grids.$grid-margin};
   }
 
   &-thumbnail {
