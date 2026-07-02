@@ -1,0 +1,23 @@
+@use '../mixins/responsive' as res;
+
+.product-spen {
+  padding-top: 20px;
+
+  .product-table {
+    margin-top: 20px;
+  }
+
+  figure {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @include res.responsive(T) {
+    .product-table {
+      margin-top: 40px;
+    }
+  }
+}
