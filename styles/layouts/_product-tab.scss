@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use '../constants/colors' as color;
 @use '../constants/dimensions' as dim;
 @use '../constants/grids' as grids;
@@ -8,7 +9,7 @@
 @use '../mixins/flexbox' as flex;
 
 .product-tab {
-  $grid-margin: grids.$sm-margin + grids.$gutter / 2;
+  $grid-margin: grids.$sm-margin + math.div(grids.$gutter, 2);
 
   position: sticky;
   top: dim.$gnb-height-sm + dim.$lnb-height-sm;
